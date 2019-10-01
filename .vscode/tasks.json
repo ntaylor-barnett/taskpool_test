@@ -1,0 +1,25 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Redis",
+            "type": "shell",
+            "command": "docker run --name taskpoolRedis -p 6379:6379 -d redis",
+            // "group": {
+            //     "kind": "test",
+            //     "isDefault": true
+            // }
+        },
+        {
+            "label": "Stop Redis",
+            "type": "shell",
+            "command": "docker stop taskpoolRedis",
+            // "group": {
+            //     "kind": "test",
+            //     "isDefault": true
+            // }
+        }
+    ]
+}
